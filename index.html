@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+    }
+   body {
+    background: black;
+    } 
+    .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .content {
+        height: 500px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 50px;
+        border: 2px solid white;
+    }
+    .header, .quote, .button {
+        padding: 10px;
+    }
+    h1 {
+       color: #ffffff;
+       text-transform: uppercase;
+       font-size: 1.5rem;
+       background-image: -webkit-linear-gradient(50deg, red,blue, rgb(15, 255, 15));
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+
+    }
+    #Quote-field{
+        font-size: 1.2rem;
+        text-shadow: none;
+        padding: 10px;
+        color: white;
+        font-weight: 600;
+    }
+    #author {
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        text-shadow: none;
+        position: relative;
+        top: -10px;
+        font-size: 1rem;
+    }
+    button{
+        font-weight: 300;   
+        padding: 10px;
+        background-color: white;
+        color: black;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        cursor: pointer;
+        border-radius: 10px;
+        position:relative;
+        top: 20px;
+        border: 2px solid white;
+    }
+    button:focus{
+        outline: none;
+    }
+    button:hover {
+        background-color: black;
+        color: white;
+    }
+    
+
+</style>
+</head>
+<body>
+   <div class="container">
+       <div class="content">
+           <div class="header">
+               <h1>Random Quote Generator</h1>
+           </div>
+       <div class="quote">
+        <p id = 'Quote-field'></p>
+        <br>
+        <p id = 'author'></p>
+       </div>
+       <div class="button">
+        <button id = 'btn'>Click Here</button>  
+       </div>
+       </div>
+   </div>
+
+
+    <script>
+        const Button = document.getElementById('btn');
+        const QuoteField = document.getElementById('Quote-field');
+        const Author = document.getElementById('author');
+
+
+       Button.addEventListener("click", function() {
+ const randomNum = Math.floor(Math.random() * 10);
+    if(randomNum === 0){
+            QuoteField.textContent = 'FACE THE FAILURE UNTIL THE FAILURE FAILS TO FACE YOU';
+            Author.textContent = '-M.S.DHONI';
+            console.log(randomNum);
+        }
+        else if (randomNum === 1){
+            QuoteField.textContent = 'NOTHING IS IMPOSSIBLE.EVEN THE WORD SAYS ITSELF SAYS ,IMPOSSIBLE ';
+            Author.textContent = '-AUDREY HEPBUM ';
+            console.log(randomNum);
+        }
+        else if (randomNum === 2){
+            QuoteField.textContent = 'LIVE AS IF YOU WERE TO DIE TOMORROW,LEARN AS IF YOU WERE TO LIVE FOREVER ';
+            Author.textContent = '- MAHATMA GANDHI';
+            console.log(randomNum);
+        }
+        else if (randomNum === 3){
+            QuoteField.textContent = 'EXCELLENCE IS A CONTINUOUS PROCESS NOT AN ACCIDENT';
+            Author.textContent = '- DR.APJ ABDUL KALAM';
+            console.log(randomNum);
+        }
+        else if (randomNum === 4){
+            QuoteField.textContent = 'YOUR RESULT DOES NOT DECIDE WHETHER YOU ARE A LOSER OR NOT,YOUR EFFORTS';
+            Author.textContent = 'SUSHANT SINGH RAJPUT';
+            console.log(randomNum);
+        }
+        else if(randomNum === 5){
+            QuoteField.textContent = 'THE BEST WAY TO PREDICT YOUR FUTURE IS TO CREATE IT.';
+            Author.textContent = '- ABHRAHAM LINCOLN';
+            console.log(randomNum);
+        }
+        else if (randomNum === 6){
+            QuoteField.textContent = 'SUCCESS ALL DEPENDS ON THE SECOND LETTER';
+            Author.textContent = '- ABOORVA';
+            console.log(randomNum);
+        }
+        else if (randomNum === 7){
+            QuoteField.textContent = 'BEING POSITIVE IN A NEGATIVE SITUATION IS NOT NATIVE,ITS LEADERSHIP';
+            Author.textContent = '- RALPH WATSON';
+        }
+        else if (randomNum === 8){
+            QuoteField.textContent = 'LIFE IS A DREAM FOR THE WISE,A GAME FOR THE FOOL, A COMEDY FOR THE RICH A TRAGEDY FOR THE POOR';
+            Author.textContent = '-SHOLOM ALEICHEM' ;
+            console.log(randomNum);
+        }
+        else if (randomNum === 9){
+            QuoteField.textContent = 'TO LIVE IS THE RAREST THING IN THE WORLD ,MOST PEOPLE EXIST,THAT IS ALL';
+            Author.textContent = '- OSCAR WILDE';
+            console.log(randomNum);
+        }
+        else if (randomNum === 10){
+            QuoteField.textContent = 'ITS NEVER TOO LATE FOR A BEGINING IN YOUR LIFE';
+            Author.textContent = '- JOYCE MEYERS'; 
+            console.log(randomNum);
+        }
+});
+    </script>
+</body>
+</html>
+	
+	
+	
